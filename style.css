@@ -31,7 +31,6 @@ header {
     padding: 40px;
     margin: 40px;
     border-top: solid 1px #ede5df;
-    border-bottom: solid 1px #ede5df;
 }
 .avatar{
     display: flex;
@@ -47,4 +46,33 @@ article{
     height: auto;
     padding: 10px;
 }
+.pages{
+    color: #ede5df;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 40px;
+    margin: 40px;
+    border-top: solid 1px #ede5df;
+}
+.page-link img{
+    width: 500px;
+    height: 500px;
+}
+.contact-me{
+    color: #ede5df;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 40px;
+    margin: 40px;
+    border-top: solid 1px #ede5df;
+}
 
+@media screen and (max-width: 992px){
+    .about-me{
+        flex-direction: column;
+    }
+}
