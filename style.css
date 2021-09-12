@@ -1,0 +1,50 @@
+*{
+    background-color: #232323;
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+}
+h1{
+    font-size: 75px;
+}
+p{
+    font-size: 20px;
+    font-weight: 300;
+    margin: 0px;
+}
+header {
+    color: #ede5df;
+    text-align: end;
+    height: 90px;
+    margin: 0px 10px;
+}
+.hero-img{
+    background-image: url(greg-trowman-jsuWg7IXx1k-unsplash-1.webp);
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+.about-me{
+    color: #ede5df;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 40px;
+    margin: 40px;
+    border-top: solid 1px #ede5df;
+    border-bottom: solid 1px #ede5df;
+}
+.avatar{
+    display: flex;
+    justify-content: center;
+}
+.avatar img{
+    width: 350px;
+    height: auto;
+    margin: auto;
+}
+article{
+    width: auto;
+    height: auto;
+    padding: 10px;
+}
+
