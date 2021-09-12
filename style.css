@@ -6,6 +6,13 @@
 h1{
     font-size: 75px;
 }
+h2{
+    color: #ede5df;
+    text-align: start;
+    font-size: 35px;
+    margin-left: 40px;
+    margin-top: 40px;
+}
 p{
     font-size: 20px;
     font-weight: 300;
@@ -23,13 +30,14 @@ header {
     background-size: cover;
     background-position: center;
 }
-.about-me{
+.containers{
     color: #ede5df;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     padding: 40px;
     margin: 40px;
+    margin-top: 0px;
     border-top: solid 1px #ede5df;
 }
 .avatar{
@@ -54,6 +62,7 @@ article{
     justify-content: space-evenly;
     padding: 40px;
     margin: 40px;
+    margin-top: 0px;
     border-top: solid 1px #ede5df;
 }
 .page-link img{
@@ -68,6 +77,7 @@ article{
     justify-content: space-evenly;
     padding: 40px;
     margin: 40px;
+    margin-top: 0px;
     border-top: solid 1px #ede5df;
 }
 
