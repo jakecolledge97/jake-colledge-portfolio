@@ -16,6 +16,7 @@ header{
     flex-direction: row;
     align-items: flex-end;
 }
+/*gives nav links a border*/
 .page-section{
     margin: 0px 10px;
     padding: 3px;
