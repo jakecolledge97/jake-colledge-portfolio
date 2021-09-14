@@ -90,12 +90,36 @@ a{
     width: 45%;
     height: 100%;
 }
+.page-container a{
+    width: 150px;
+}
 .page-container img{
     height: 160px;
     width: 150px;
 }
+
+/*contact links*/
+ #contact-me{
+     font-size: 20px;
+ }
+ ul{
+    background-color: #ede5df;
+    margin-top: 20px;
+}
+ li{
+     list-style-type: none;
+     margin-top: 5px;
+ }
+ footer{
+     text-align: center;
+     color:  #ede5df;
+     background-color: #232323;
+ }
+ 
 @media screen and (max-width: 1000px){
-    
+    .hero-img{
+        height: 250px;
+    }
     /*about me section when on screen/phone*/
     #about-me{
         flex-direction: column;
@@ -136,6 +160,7 @@ a{
     }
 }
 @media screen and (max-width: 600px){
+    /*Align smaller webpage links for smaller screens*/
     .page-container{
         flex-direction: column;
         align-items: center;
