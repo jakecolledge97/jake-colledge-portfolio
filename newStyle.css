@@ -1,0 +1,48 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: black;
+    background-image: url(assets/images/stage-background.jpeg);
+    background-blend-mode: luminosity;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+.round-bg{
+    height: 100vh;
+    background-image: radial-gradient(transparent 30%, black 70%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.whoBtn{
+    background-color: #191716;
+    padding: 10px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+.whoBtn:hover{
+    border-top: 3px solid #191716;
+    border-bottom: 3px solid #191716;
+    background-color: transparent; 
+    border-radius: 0px;
+    font-size: 40px;
+    width: 300px;
+}
+/*.lightBeam{
+    background-color: white;
+    height: 500px;
+    width: 50px;
+}
+.spotLight{
+    width: 131px;
+    height: 130px;
+    background-image: radial-gradient(white -35%, transparent 76%);
+    border-radius: 150px;
+    transform: rotateX(70deg);
+}*/
