@@ -23,16 +23,45 @@ body{
     font-size: 30px;
     font-weight: bold;
     color: white;
-    border: none;
+    border: 0px solid #191716;
     border-radius: 10px;
+    transition: all .1s linear;
+    white-space: nowrap;
+    opacity: 1;
 }
-.whoBtn:hover{
-    border-top: 3px solid #191716;
-    border-bottom: 3px solid #191716;
-    background-color: transparent; 
-    border-radius: 0px;
+.whoBtn:hover{ 
     font-size: 40px;
-    width: 300px;
+    transition: all .1s linear;
+    white-space: nowrap;
+}
+.btnContainer {
+    background: #191716;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-content: center;
+    min-width: 191px;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    transition: all .1s linear;
+}
+.hamburger {
+    display: none;
+    position: absolute;
+    left: 0px;
+    height: 56px;
+    padding-left: 10px;
+}
+.hamburger div{
+    width: 35px;
+    height: 5px;
+    background-color: #696969;
+    margin: 6px 0;
+    border-radius: 6px;
+}
+.hamburger div:first-child{
+    margin-top: 13px;
 }
 /*.lightBeam{
     background-color: white;
