@@ -1,29 +1,24 @@
 *{
     margin: 0px;
     padding: 0px;
+    font-family: 'Inconsolata', monospace;
+    max-width: 100%;
 }
 body{
-    background-color: black;
-    background-image: url(assets/images/stage-background.jpeg);
-    background-blend-mode: luminosity;
-    background-attachment: fixed;
-    background-repeat:no-repeat;
-    background-position:center;
-}
-.round-bg{
     height: 100vh;
-    background-image: radial-gradient(transparent 30%, black 70%);
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 .whoBtn{
     background-color: #191716;
     padding: 10px;
-    font-family: 'Rubik', sans-serif;
     font-size: 30px;
     font-weight: bold;
-    color: white;
+    color: #d9b9a9;
     border: 0px solid #191716;
     border-radius: 10px;
     transition: all .1s linear;
@@ -46,6 +41,7 @@ body{
     height: auto;
     border-radius: 10px;
     transition: all .1s linear;
+    z-index: 1;
 }
 .hamburger {
     display: none;
@@ -53,11 +49,12 @@ body{
     left: 0px;
     height: 56px;
     padding-left: 10px;
+    align-items: center;
 }
 .hamburger div{
     width: 35px;
     height: 5px;
-    background-color: #696969;
+    background-color: #8a8481;
     margin: 6px 0;
     border-radius: 6px;
 }
@@ -67,12 +64,14 @@ body{
 
 .info-container{
     width: 100%;
-    height: 100%
+    height: 100%;
 }
 .containers{
     width: 100%;
-    height: 300px;
-    background: #191716;
+    height: 0vh;
+    background: rgba(25,23,22,0.8);
+    color: rgb(51, 255, 0);
+
 }
 .parallax{
     height: 100%;
@@ -80,10 +79,23 @@ body{
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    align-items: flex-end;
 }
 .parallax#pic1{
     background-image: url(./assets/images/parkway.jpg);
 }
 .parallax#pic2{
     background-image: url(./assets/images/drifting.jpg);
+}
+.me {
+    height: 0px;
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    bottom: 0px;
+    display: flex;
+    align-items: center;
+    overflow:hidden;
+    color: #8a8481
 }
