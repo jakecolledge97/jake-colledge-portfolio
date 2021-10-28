@@ -14,7 +14,7 @@ $('.whoBtn').click(
             $(this).css('display','none')
             $('.hamburger').fadeIn('slow')
         })
-        $('.btnContainer').css('height','56px')
+        $('.btnContainer').css({'height':'56px','position': 'fixed'})
         
     })
     
