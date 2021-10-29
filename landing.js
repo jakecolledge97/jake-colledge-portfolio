@@ -3,7 +3,8 @@ let header = "This is Jake Colledge."
 $('.whoBtn').click(
     function(){
         $('.btnContainer').animate({
-            top: '0px'
+            top: '0px',
+            width: '180px'
     },1000)
     $('.btnContainer').css({'top': '0','width': '191px'})
     $('.btnContainer').animate({
@@ -22,14 +23,50 @@ $('.whoBtn').click(
         },500)
         $('.containers').fadeIn('fast', function(){
             $(this).animate({
-                height: '25vh',
-                padding: '5px'
+                height: '25vh'
             },500)
-            $('.info-container').animate({
-                marginTop: '56px'
-            },500)
+            $('.typing-area').css('display','flex')
+                   
         })
-
+        typeSentence()
+        
+        
     })
     
 })
+
+let selector = 1;
+async function typeSentence(sentence = $(`.containers p:nth-child(${selector})`).children().text(), eleRef = $('.sentence'), delay=100, callback){
+    const letters = sentence.split("")
+
+    let i = 0;
+    while(i < letters.length){
+        await waitForMs(delay);
+        eleRef.append(letters[i]);
+        i++      
+    }
+    eleRef.text('')
+    switch(selector){
+        case 1:
+            $('.containers p:nth-child(1)').css('display', 'block')
+            selector++
+            typeSentence()
+            break;
+        case 2:
+            $('.containers p:nth-child(2)').css('display', 'block')
+            selector++
+            typeSentence()
+            break;
+        case 3:
+            $('.containers p:nth-child(3)').css('display', 'block')
+            selector++
+            break;
+
+    }
+    
+    return;
+}
+
+function waitForMs(ms){
+    return new Promise(resolve => setTimeout(resolve, ms))
+}

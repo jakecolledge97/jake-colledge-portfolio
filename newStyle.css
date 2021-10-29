@@ -24,6 +24,8 @@ body{
     transition: all .1s linear;
     white-space: nowrap;
     opacity: 1;
+    width: fit-content;
+    
 }
 .whoBtn:hover{ 
     font-size: 40px;
@@ -73,6 +75,9 @@ body{
     color: rgb(51, 255, 0);
 
 }
+.containers > *{
+    display: none;
+}
 .parallax{
     height: 100%;
     background-attachment: fixed;
@@ -98,4 +103,28 @@ body{
     align-items: center;
     overflow:hidden;
     color: #8a8481
+}
+#about-me p{
+    overflow: hidden;
+    letter-spacing: .15em;    
+}
+.typing-area{
+    width: 100%;
+    height: 20px;
+    background: black;
+    position: absolute;
+    bottom: 0px;
+}
+.input-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 42px;
+    background-color: white;
+    animation: blink .5s linear infinite alternate;
+}
+@keyframes blink {
+    0% {opacity: 1;}
+    40% {opacity: 1;}
+    60% {opacity: 0;}
+    100% {opacity: 0;}
 }
