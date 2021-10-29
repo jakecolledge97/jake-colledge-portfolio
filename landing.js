@@ -22,8 +22,9 @@ $('.whoBtn').click(
         },500)
         $('.containers').fadeIn('fast', function(){
             $(this).animate({
-                height: '25vh'
+                minHeight: '17vh'
             },500)
+            $('.containers').css('display','flex')
             $('.typing-area').css('display','flex')
                    
         })
@@ -34,8 +35,12 @@ $('.whoBtn').click(
 })
 
 let selector = 1;
-async function typeSentence(sentence = $(`.containers p:nth-child(${selector})`).children().text(), eleRef = $('.sentence'), delay=20, callback){
-    const letters = sentence.split("")
+let element = "#welcome-text"
+let hasRunAbout = false;
+
+async function typeSentence(sentence = $(`${element} p:nth-child(${selector})`), eleRef = $(element).find('.sentence'), delay=20, callback){
+    $('.info-container').css('overflow-y','hidden')
+    const letters = sentence.children().text().split("")
 
     let i = 0;
     while(i < letters.length){
@@ -46,24 +51,28 @@ async function typeSentence(sentence = $(`.containers p:nth-child(${selector})`)
     eleRef.text('')
     switch(selector){
         case 1:
-            $('.containers p:nth-child(1)').css('display', 'block')
+            sentence.css('display', 'block')
             selector++
             typeSentence()
             break;
         case 2:
-            $('.containers p:nth-child(2)').css('display', 'block')
+            sentence.css('display', 'block')
             selector++
             typeSentence()
             break;
         case 3:
-            $('.containers p:nth-child(3)').css('display', 'block')
+            sentence.css('display', 'block')
             selector++
             typeSentence()
             break;
         case 4:
-            $('.containers p:nth-child(4)').css('display', 'block')
-            $('body').css('overflow-y','scroll')
-            $('.typing-area').fadeOut('fast')
+            sentence.css('display', 'block')
+            $('.info-container').css('overflow-y','scroll')
+            if(element === "#about-me"){
+                hasRunAbout = true
+            }
+            element = "#about-me"
+            selector = 1
             break;
     }    
     return;
@@ -72,3 +81,14 @@ async function typeSentence(sentence = $(`.containers p:nth-child(${selector})`)
 function waitForMs(ms){
     return new Promise(resolve => setTimeout(resolve, ms))
 }
+
+
+var observer = new IntersectionObserver(function(entries) {
+    if(entries[0].isIntersecting === true && !hasRunAbout)
+        //document.querySelector('.info-container').style.overflow="hidden";
+        typeSentence()
+
+}, { threshold: [1] });
+
+observer.observe(document.querySelector('#about-me'));
+

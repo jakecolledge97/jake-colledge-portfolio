@@ -25,7 +25,7 @@ body{
     transition: all .1s linear;
     white-space: nowrap;
     opacity: 1;
-    width: fit-content;
+    width: min-content;
     
 }
 .whoBtn:hover{ 
@@ -68,14 +68,24 @@ body{
 .info-container{
     width: 100%;
     height: 100%;
+    scroll-snap-type: y mandatory;
 }
 .containers{
     width: 100%;
-    height: 0vh;
+    max-height: max-content;
     background: rgba(25,23,22,0.8);
     color: rgb(51, 255, 0);
-    scroll-snap-align: start;
+    flex-direction: column;
+    justify-content: flex-end;
 }
+.containers p{
+    padding-bottom: 5px;
+    letter-spacing: .15em;    
+}
+.containers p:first-child{
+    padding-top: 5px;    
+}
+
 .containers > *{
     display: none;
 }
@@ -87,6 +97,8 @@ body{
     background-size: cover;
     display: flex;
     align-items: flex-end;
+    scroll-snap-align: start;
+    pointer-events: none;
 }
 .parallax#pic1{
     background-image: url(./assets/images/parkway.jpg);
@@ -105,15 +117,10 @@ body{
     overflow:hidden;
     color: #8a8481
 }
-#welcome-text p{
-    padding-bottom: 5px;
-    letter-spacing: .15em;    
-}
 .typing-area{
     width: 100%;
     min-height: 20px;
     background: black;
-    position: absolute;
     bottom: 0px;
 }
 .input-cursor {
@@ -121,9 +128,6 @@ body{
     width: 2px;
     background-color: white;
     animation: blink .5s linear infinite alternate;
-}
-#about-me{
-    
 }
 @keyframes blink {
     0% {opacity: 1;}
