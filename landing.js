@@ -49,31 +49,83 @@ async function typeSentence(sentence = $(`${element} p:nth-child(${selector})`),
         i++      
     }
     eleRef.text('')
-    switch(selector){
-        case 1:
-            sentence.css('display', 'block')
-            selector++
-            typeSentence()
-            break;
-        case 2:
-            sentence.css('display', 'block')
-            selector++
-            typeSentence()
-            break;
-        case 3:
-            sentence.css('display', 'block')
-            selector++
-            typeSentence()
-            break;
-        case 4:
-            sentence.css('display', 'block')
-            $('.info-container').css('overflow-y','scroll')
-            if(element === "#about-me"){
+    if(element === "#welcome-text"){
+        switch(selector){
+            case 1:
+                sentence.css('display', 'block')
+                selector++
+                typeSentence()
+                break;
+            case 2:
+                sentence.css('display', 'block')
+                selector++
+                typeSentence()
+                break;
+            case 3:
+                sentence.css('display', 'block')
+                selector++
+                typeSentence()
+                break;
+            case 4:
+                sentence.css('display', 'block')
+                $('.info-container').css('overflow-y','scroll')
+                element = "#about-me"
+                selector = 1
+                break;
+        }
+    }else if(element === "#about-me"){
+        hasRunAbout = true
+        switch(selector){
+            case 1:
+                sentence.css('display', 'block')
+                selector++
+                typeSentence()
+                break;
+            case 2:
+                sentence.css('display', 'block')
+                selector++
+                typeSentence()
+                break;
+            case 3:
+                sentence.css('display', 'block')
+                selector++
+                typeSentence()
+                break;
+            case 4:
+                sentence.css('display', 'block')
+                selector++
+                typeSentence()
+                break;
+            case 5:
+                sentence.css('display', 'block')
+                selector++
+                typeSentence()
+                break;
+            case 6:
+                sentence.css('display', 'block')
+                selector++
+                typeSentence()
+                break;
+            case 7:
+                sentence.css('display', 'block')
+                selector++
+                typeSentence()
+                break;
+            case 8:
+                sentence.css('display', 'block')
+                selector++
+                typeSentence()
+                break;
+            case 9:
+                sentence.css('display', 'block')
+                selector++
+                typeSentence()
+                break;
+            case 10:
                 hasRunAbout = true
-            }
-            element = "#about-me"
-            selector = 1
-            break;
+                aboutMePics()
+                break;
+        }
     }    
     return;
 }
@@ -91,4 +143,11 @@ var observer = new IntersectionObserver(function(entries) {
 }, { threshold: [1] });
 
 observer.observe(document.querySelector('#about-me'));
+
+function aboutMePics(){
+    $('.bootcamp').fadeIn('fast')
+    $('.bootcamp').css('display','flex')
+    $('#pic2').css('pointer-events','all')
+    $('.info-container').css('overflow-y','scroll')
+}
 

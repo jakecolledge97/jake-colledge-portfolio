@@ -96,15 +96,22 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     scroll-snap-align: start;
     pointer-events: none;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 .parallax#pic1{
     background-image: url(./assets/images/parkway.jpg);
 }
 .parallax#pic2{
     background-image: url(./assets/images/drifting.jpg);
+    background-position: left;
+}
+.parallax#pic3{
+    background-image: url(./assets/images/shelves.jpg);
+    background-position: center;
 }
 .me {
     height: 0px;
@@ -128,6 +135,24 @@ body{
     width: 2px;
     background-color: white;
     animation: blink .5s linear infinite alternate;
+}
+.bootcamp{
+    display: none;
+    width: 100%;
+    height: 60%;
+    justify-content: center;
+    align-items: center;
+}
+.bootcamp-container{
+    width: 50vh;
+    padding: 35px;
+    margin-bottom: 15%;
+    background: rgba(25,23,22,0.8);
+    border-radius: 15px;
+}
+.bootcamp a{
+    width: 100%;
+    height: 100%;
 }
 @keyframes blink {
     0% {opacity: 1;}
