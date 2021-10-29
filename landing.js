@@ -34,7 +34,7 @@ $('.whoBtn').click(
 })
 
 let selector = 1;
-async function typeSentence(sentence = $(`.containers p:nth-child(${selector})`).children().text(), eleRef = $('.sentence'), delay=80, callback){
+async function typeSentence(sentence = $(`.containers p:nth-child(${selector})`).children().text(), eleRef = $('.sentence'), delay=20, callback){
     const letters = sentence.split("")
 
     let i = 0;
