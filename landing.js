@@ -17,7 +17,6 @@ $('.whoBtn').click(
             $('.hamburger').fadeIn('fast')
         })
         $('.btnContainer').css({'height':'56px','position': 'fixed'})
-        $('body').css('overflow-y','scroll')
         $('.me').animate({
             height: '100%'
         },500)
@@ -28,15 +27,14 @@ $('.whoBtn').click(
             $('.typing-area').css('display','flex')
                    
         })
-        typeSentence()
-        
+        typeSentence()     
         
     })
     
 })
 
 let selector = 1;
-async function typeSentence(sentence = $(`.containers p:nth-child(${selector})`).children().text(), eleRef = $('.sentence'), delay=100, callback){
+async function typeSentence(sentence = $(`.containers p:nth-child(${selector})`).children().text(), eleRef = $('.sentence'), delay=80, callback){
     const letters = sentence.split("")
 
     let i = 0;
@@ -60,10 +58,14 @@ async function typeSentence(sentence = $(`.containers p:nth-child(${selector})`)
         case 3:
             $('.containers p:nth-child(3)').css('display', 'block')
             selector++
+            typeSentence()
             break;
-
-    }
-    
+        case 4:
+            $('.containers p:nth-child(4)').css('display', 'block')
+            $('body').css('overflow-y','scroll')
+            $('.typing-area').fadeOut('fast')
+            break;
+    }    
     return;
 }
 
