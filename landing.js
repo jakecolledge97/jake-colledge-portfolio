@@ -155,7 +155,7 @@ var observer2 = new IntersectionObserver(function(entries) {
 
 }, { threshold: [1] });
 
-observer2.observe(document.querySelector('#about-me'));
+observer2.observe(document.querySelector('#pages'));
 
 function aboutMePics(){
     $('.bootcamp').fadeIn('fast')
