@@ -113,6 +113,10 @@ body{
     background-image: url(./assets/images/shelves.jpg);
     background-position: center;
 }
+.parallax#pic4{
+    background-image: url(./assets/images/parkway.jpg);
+    justify-content: center;
+}
 .me {
     height: 0px;
     position: absolute;
@@ -195,13 +199,23 @@ body{
     background: #191716;
     border-radius: 50%;
 }
+.contact-container {
+    width: 45vh;
+    height: min-content;
+    padding: 25px;
+    background: rgba(255,255,255, 0.5);
+    border-radius: 10px;
+}
+.contact-container ul{
+    list-style-type: none;
+}
 @keyframes blink {
     0% {opacity: 1;}
     40% {opacity: 1;}
     60% {opacity: 0;}
     100% {opacity: 0;}
 }
-@media only screen and (max-width: 550px){
+@media only screen and (max-height: 730px){
     .bootcamp{
         height: 42%;
     }
