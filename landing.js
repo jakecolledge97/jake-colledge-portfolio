@@ -124,12 +124,20 @@ async function typeSentence(sentence = $(`${element} p:nth-child(${selector})`),
                 break;
             case 10:
                 hasRunAbout = true
-                element = "pages"
+                element = "#pages"
+                selector = 1
                 aboutMePics()
                 break;
         }
-    }else if(element = "pages"){
-
+    }else if(element = "#pages"){
+        switch(selector){
+            case 1:
+                sentence.css('display', 'block')
+                hasRunPages = true;
+                $('.info-container').css('overflow-y','scroll')
+                break;
+            
+        }
     }    
     return;
 }

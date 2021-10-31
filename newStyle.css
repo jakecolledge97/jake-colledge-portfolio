@@ -201,3 +201,32 @@ body{
     60% {opacity: 0;}
     100% {opacity: 0;}
 }
+@media only screen and (max-width: 550px){
+    .bootcamp{
+        height: 42%;
+    }
+}
+@media only screen and (max-width: 550px){
+    #about-me{
+        min-height: min-content;
+    }
+    .bootcamp-container{
+        margin-bottom: 0px;
+    }
+    .work-container{
+        flex-direction: column;
+        height: max-content;
+        padding: 5px 0px;
+    }
+    .my-work{
+        margin: 3px 0;
+    }
+    .my-work:nth-child(2){
+        height: 30vh;
+        width: 30vh;
+        order: 1;
+    }
+    .mood{
+        font-size: 200%;
+    }
+}
