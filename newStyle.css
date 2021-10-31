@@ -122,7 +122,7 @@ body{
     display: flex;
     align-items: center;
     overflow:hidden;
-    color: #8a8481
+    color: #8a8481;
 }
 .typing-area{
     width: 100%;
@@ -162,14 +162,29 @@ body{
     justify-content: space-around;
     align-items: center;
 }
-.my-work:nth-child(2){
-    width: 30vh;
-    height: 30vh;
+.my-work:first-child{
+    background: #8a8481;
 }
-.my-work:nth-child(2) p{
+.my-work:nth-child(2){
+    width: 250px;
+    height: 250px;
+}
+.my-work:last-child{
+    background: #0284C9;
+    color: white;
+}
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&family=Source+Code+Pro:wght@300&family=Ubuntu:wght@400;700&display=swap');
+.mood{
     color: rgb(100,165,161);
+    font-weight: bold;
     font-size: 50px;
     text-align: center;
+    font-family:'Ubuntu', sans-serif; 
+}
+.mood span{
+    color:#3c3f58;
+    font-family:'Ubuntu', sans-serif; 
+    font-weight: bold;
 }
 .my-work{
     display: flex;

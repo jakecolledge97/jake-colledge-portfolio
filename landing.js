@@ -37,6 +37,7 @@ $('.whoBtn').click(
 let selector = 1;
 let element = "#welcome-text"
 let hasRunAbout = false;
+let hasRunPages = false;
 
 async function typeSentence(sentence = $(`${element} p:nth-child(${selector})`), eleRef = $(element).find('.sentence'), delay=20, callback){
     $('.info-container').css('overflow-y','hidden')
@@ -123,9 +124,12 @@ async function typeSentence(sentence = $(`${element} p:nth-child(${selector})`),
                 break;
             case 10:
                 hasRunAbout = true
+                element = "pages"
                 aboutMePics()
                 break;
         }
+    }else if(element = "pages"){
+
     }    
     return;
 }
@@ -144,10 +148,30 @@ var observer = new IntersectionObserver(function(entries) {
 
 observer.observe(document.querySelector('#about-me'));
 
+var observer2 = new IntersectionObserver(function(entries) {
+    if(entries[0].isIntersecting === true && !hasRunPages)
+        //document.querySelector('.info-container').style.overflow="hidden";
+        typeSentence()
+
+}, { threshold: [1] });
+
+observer2.observe(document.querySelector('#about-me'));
+
 function aboutMePics(){
     $('.bootcamp').fadeIn('fast')
     $('.bootcamp').css('display','flex')
     $('#pic2').css('pointer-events','all')
     $('.info-container').css('overflow-y','scroll')
+    $('.my-work').css('pointer-events','all')
 }
+
+$('.my-work:first-child').click(function(){
+    window.open("https://jakecolledge97.github.io/work-day-scheduler/", "_blank")
+})
+$('.my-work:nth-child(2)').click(function(){
+    window.open("https://rhjeffries.github.io/ideal-telegram/", "_blank")
+})
+$('.my-work:last-child').click(function(){
+    window.open("https://jakecolledge97.github.io/weather-app/", "_blank")
+})
 
