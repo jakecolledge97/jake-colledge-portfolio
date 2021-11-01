@@ -1,80 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" type="ico" href="assets/images/Favicon.ico"/>
-    <title>Jake Colledge.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Jake</title>
 </head>
-
 <body>
-    <header>
-        <div class="nav-container">
-            <nav class="page-section"><h3><a href="#about-me">About</a></h3></nav>
-            <nav class="page-section"><h3><a href="#pages">Pages</a></h3></nav>
-            <nav class="page-section"><h3><a href="#contact-me">Contact</a></h3></nav>
-        </div>
-        <h1 class="title">Jake Colledge.</h1>
-    </header>
-
-    <div class="hero-img"></div>
     
-    <main>
-        <section class="containers" id="about-me">
-            <h2>Who Am I?</h2>
-            <p>I am Jake. <br>I have been a hairstylist for 7 years. I also have interest in the music industry, and have performed in multiple bands.<br>I love classic japanese cars, and I own two 1990 Mazda Miatas'. <br>I have decided to pursue my career in web/app development by completing this Coding Bootcamp.</p>
-            <img src="./assets/images/myself.jpg" alt="Picture of me">
-        </section>
-        <section class="containers" id="pages">
-            <h2>My Work</h2>
-            <article class="page-links">
-                <div class="main-page-container">
-                    <a href="https://jakecolledge97.github.io/horiseon-landing-page/" target="_blank">
-                        <div class="link-container"><img src="./assets/images/horiseonwebpage.png" alt="horiseon webpage"></div>
-                        <div class="page-title"><h4>Horiseon Landing Page</h4></div>
-                    </a>
-                </div>
-                <div class="page-container">
-                    <a href="#">
-                        <div class="title-position">
-                            <img src="./assets/images/placeholder.png" alt="page image 1">
-                            <div class="page-title"><h4>Webpage 1</h4></div>
-                        </div>
-                    </a>
-                    <a href="">
-                        <div class="title-position">
-                            <img src="./assets/images/placeholder.png" alt="page image 2">
-                            <div class="page-title"><h4>Webpage 2</h4></div>
-                        </div>
-                    </a>
-                    <a href="">
-                        <div class="title-position">
-                            <img src="./assets/images/placeholder.png" alt="page image 3">
-                            <div class="page-title"><h4>Webpage 3</h4></div>
-                        </div>
-                    </a>
-                </div>
-            </article>
-        </section>
-        <section class="containers" id="contact-me">
-            <h2>Contact Me</h2>
-            <ul class="contact-list">
-                <li><img src="assets/images/googleicon.png"><a href="mailto:jakecolledgework@gmail.com"> jakecolledgework@gmail.com</a></li>
-                <li><img src="assets/images/facebookicon.png"> Facebook: <a href="https://www.facebook.com/jake.colledge.77/">Jake Colledge</a></li>
-                <li><img src="assets/images/phoneicon.png"> Phone: (+61) 0449 933 609</li>
+    <div class="btnContainer">
+        <button class="whoBtn">Who is Jake?</button>
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="navigation">
+            <ul>
+                <li><a href="#pic1" id="welcome-nav">Welcome</a></li>
+                <li><a href="#pic2" id="about-me-nav">About Me</a></li>
+                <li><a href="#pic3" id="my-work-nav">My Work</a></li>
+                <li><a href="#pic4" id="contact-me-nav">Contact Me</a></li>
             </ul>
-        </section>
-    </main>
-    <footer>
-        <h6>Colledge.™</h6>
-    </footer>
-
+        </div>
+        <div class="me">
+            <h1>This is Jake Colledge.</h1>
+        </div>
+    </div>    
+    
+    <div class="info-container">
+        <div class="parallax" id="pic1">
+            <div class="containers" id="welcome-text">
+                <p>>> <span>Hello, as you know, I am Jake. \n</span></p>
+                <p>>> <span>I am currently studying web development through the Adelaide Uni Full Stack Bootcamp Course. \n</span></p>
+                <p>>> <span>This is my portfolio page where I can show off some of the skills I have learnt in my time studying. \n</span></p>
+                <p>>> <span>And also tell you a bit about myself! ^_^</span></p>
+                <div class="typing-area">
+                    <span id="sentence" class="sentence"></span>
+                    <span class="input-cursor"></span>
+                </div>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="parallax" id="pic2">
+            
+            <div class="bootcamp">
+                <div class="bootcamp-container">
+                    <a href="https://bootcamps.adelaide.edu.au/" target="_blank"><img src="assets/images/coding-bootcamp.jpg"></a>
+                </div>
+            </div>
+            
+            <div class="containers" id="about-me">
+                <p>>> <span>So... Some things about myself \n</span></p>
+                <p>>> <span>I like cars and racing, but it's quite an expensive hobby so I keep that to a minimun \n</span></p>
+                <p>>> <span>I love all kinds of music, but mostly of the heavy genre \n</span></p>
+                <p>>> <span>Professionally, I have been working as a hairdresser for 7 years \n</span></p>
+                <p>>> <span></span></p>
+                <p>>> <span></span></p>
+                <p>>> <span>Recently I have wanted to explore new paths \n</span></p>
+                <p>>> <span>And I have always loved computers since I was young. \n</span></p>
+                <p>>> <span>so on the 27th of July, 2021, I joined the Adelaide Uni Bootcamp.</span></p>
+                <p>>> <span>load bootcamp.png</span></p>
+                <div class="typing-area">
+                    <span id="sentence" class="sentence"></span>
+                    <span class="input-cursor"></span>
+                </div>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="parallax" id="pic3">
+            <div class="work-container">
+                <div class="my-work">
+                    <p class="scheduler">Scheduler.</p>
+                </div>
+                <div class="my-work">
+                    <p class=mood>mood<span>vies</span></p>
+                </div>
+                <div class="my-work">Forcast App.</div>
+            </div>
+            <div class="containers" id="pages">
+                <p>>> <span>Feel free to have a look at some of my work! ^_^</span></p>
+                <div class="typing-area">
+                    <span id="sentence" class="sentence"></span>
+                    <span class="input-cursor"></span>
+                </div>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="parallax" id="pic4">
+            <div class="contact-container">
+                <ul>
+                    <li><p>Email: <span>jakecolledgework@gmail.com</span></p></li>
+                    <li><p>Phone: <span>0449933609</span></p></li>
+                    <li><p>LinkedIn: <span><a href="https://www.linkedin.com/in/jake-colledge-462986223/" target="_blank" class="linkedin">Click Here</a></span></p></li>
+                    <li><p>GitHub: <span><a href="https://github.com/jakecolledge97" target="_blank" class="github">Click Here</a></span></p></li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>    
+    
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="landing.js"></script>
 </body>
-
 </html>

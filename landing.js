@@ -1,4 +1,26 @@
 let header = "This is Jake Colledge."
+let navigation = 0;
+let selector = 1;
+let element = "#welcome-text"
+let hasRunAbout = false;
+let hasRunPages = false;
+
+function onLoad(){
+    
+    if(!(window.location.hash === '')){
+        clearTimeout(waitForMs())
+        hasRunAbout = true
+        hasRunPages = true
+        $('.whoBtn').css('display','none')
+        $('.btnContainer').css({'display':'block','top': '0','width': '100%','height':'56px','position':'fixed', 'border-radius': '0'})
+        $('.hamburger').css('display', 'block')
+        $('.me').css('height', '100%')
+        $('.containers').css('display','flex')
+        $('.typing-area').css('display','flex')
+        loadAll()
+    }   
+}
+onLoad()
 
 $('.whoBtn').click(
     function(){
@@ -34,12 +56,45 @@ $('.whoBtn').click(
     
 })
 
-let selector = 1;
-let element = "#welcome-text"
-let hasRunAbout = false;
-let hasRunPages = false;
+$('.hamburger').click(function(){
+    navigation++
+    if(navigation === 1){
+        $('.navigation').css('display','block')
+    }else if(navigation === 2){
+        $('.navigation').css('display','none')
+        navigation = 0
+    }
+})
+$('#welcome-nav').click(function(){
+    loadAll()
+})
+$('#about-me-nav').click(function(){
+    loadAll()
+})
+$('#my-work-nav').click(function(){
+    loadAll()
+})
+$('#contact-me-nav').click(function(){
+    loadAll()
+})
+function loadAll(){
+    hasRunAbout = true
+    hasRunPages = true
+    navigation = 0
+    $('#welcome-text p').css('display','block')
+    $('#about-me p').css('display','block')
+    $('#pages p').css('display','block')
+    $('.bootcamp').css('display','flex')
+    $('#pic2').css('pointer-events','all')
+    $('.my-work').css('pointer-events','all')
+    $('.navigation').css('display','none')
+    $('.info-container').css('overflow-y','scroll')
+}
 
-async function typeSentence(sentence = $(`${element} p:nth-child(${selector})`), eleRef = $(element).find('.sentence'), delay=20, callback){
+async function typeSentence(sentence = $(`${element} p:nth-child(${selector})`), eleRef = $(element).find('.sentence'), delay=100, callback){
+    if(!(window.location.hash === '')){
+        return
+    }
     $('.info-container').css('overflow-y','hidden')
     const letters = sentence.children().text().split("")
 
