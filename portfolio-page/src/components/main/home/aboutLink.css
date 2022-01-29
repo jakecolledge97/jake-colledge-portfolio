@@ -1,0 +1,16 @@
+.info a{
+    background: #1C2B2E;
+    width: fit-content;
+    border-radius: 2em;
+    align-self: flex-end;
+}
+
+.info a:hover{
+    background: transparent;
+    color: black;
+    opacity: 70%;
+    width: fit-content;
+    border-radius: 2em;
+    align-self: flex-end;
+}
+

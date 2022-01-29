@@ -1,0 +1,29 @@
+.logo a{
+   display: flex;
+   filter: grayscale(100%) brightness(100);
+   height: max-content;
+}
+
+.logo a:hover{
+    background: transparent;
+}
+
+.club, .heart, .diamond, .spade{
+    background-size: cover;
+    background-position: center;
+    width: 2em;
+    height: 2em;
+}
+
+.logo .club{
+    background-image: url(../../../public/assets/clubs.png);
+}
+.logo .diamond{
+    background-image: url(../../../public/assets/diamond.png);
+}
+.logo .spade{
+    background-image: url(../../../public/assets/spade.png);
+}
+.logo .heart{
+    background-image: url(../../../public/assets/canvas.png);
+}
