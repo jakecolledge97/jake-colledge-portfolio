@@ -1,15 +1,16 @@
 header {
-    width: 99vw;
+    width: 96vw;
     height: fit-content;
     background: #1C2B2E;
     box-shadow: 0px 5px 20px 5px #1C2B2E;
     color: white;
-    padding: 1vh;
+    padding: 1vh 2vw;
     display: flex;
     position: fixed;
     align-items: center;
     margin: 0 auto;
     top: 0;
+    z-index: 1;
 }
 
 h1 {

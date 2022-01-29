@@ -1,7 +1,8 @@
 main {
     display: flex;
+    flex-direction: column;
     align-self: center;
     width: 80%;
-    height: 900px;
+    min-height: fit-content;
     margin: 10vh auto 0;
 }
