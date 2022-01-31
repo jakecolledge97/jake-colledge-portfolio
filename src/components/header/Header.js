@@ -17,9 +17,9 @@ const Header = ({ currentPage, handlePageChange }) => {
                 </a>
             </div>
             <div className="links">
-                <a href="#contact" className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'} onClick={() => handlePageChange('Contact')} >Contact</a>
-                <a href="https://github.com/jakecolledge97" className={currentPage === 'Work' ? 'nav-link active' : 'nav-link'} onClick={() => handlePageChange('Work')}>Work</a>
-                <a href="#about" className={currentPage === 'About' ? 'nav-link active' : 'nav-link'} onClick={() => handlePageChange('About')}>About</a>
+                <a href="/contact" className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'} >Contact</a>
+                <a href="https://github.com/jakecolledge97" className={currentPage === 'Work' ? 'nav-link active' : 'nav-link'} >Work</a>
+                <a href="/about" className={currentPage === 'About' ? 'nav-link active' : 'nav-link'} >About</a>
             </div>
             <div className="hamburger-container">
                 <div className="hamburger">
