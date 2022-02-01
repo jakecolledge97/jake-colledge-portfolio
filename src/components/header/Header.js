@@ -18,7 +18,7 @@ const Header = ({ currentPage, handlePageChange }) => {
             </div>
             <div className="links">
                 <a href="/contact" className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'} >Contact</a>
-                <a href="https://github.com/jakecolledge97" className={currentPage === 'Work' ? 'nav-link active' : 'nav-link'} >Work</a>
+                <a href="https://github.com/jakecolledge97" target="_blank" className={currentPage === 'Work' ? 'nav-link active' : 'nav-link'} >Work</a>
                 <a href="/about" className={currentPage === 'About' ? 'nav-link active' : 'nav-link'} >About</a>
             </div>
             <div className="hamburger-container">
