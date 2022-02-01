@@ -9,16 +9,20 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        if(!inputName||!inputMessage){
+        if(!inputName||!inputMessage||!inputEmail){
             console.log("please fill out fields")
         }else{
             console.log('details subbmitted')
+            setInputName('')
+            setInputEmail('')
+            setInputMessage('')
         }
     }
 
     const handleChange = (e) => {
         if(e.target.name === 'message'){
             setInputMessage(e.target.value)
+            console.log(e.target.value)
         }else if(e.target.name === 'email'){
             setInputEmail(e.target.value)
         }else{
