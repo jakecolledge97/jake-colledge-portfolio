@@ -1,0 +1,47 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    background: #1C2B2E;
+    border-radius: 0.5em;
+    padding: 5px;
+    color: white;
+}
+
+input {
+    border-radius: 2em !important;
+    box-shadow: none;
+    border: black 1px solid;
+}
+
+textarea {
+    border-radius: 1em !important;
+    box-shadow: none;
+    border: black 1px solid;
+    height: 170px;
+}
+
+.contact button {
+    color: #1C2B2E;
+    background: white;
+    width: 25%;
+    align-self: flex-end;
+    border-radius: 1em;
+    border: 0px;
+}
+
+.contact button:hover {
+    color: white;
+    background: #1C2B2E;
+    width: 25%;
+    align-self: flex-end;
+    border-radius: 1em;
+    border: 0px;
+}
+#name {
+    width: 10em;
+}
+
+#email {
+    width: 20em;
+}
+

@@ -18,7 +18,7 @@ const Home = (handlePageChange, currentPage) => {
                         <h1>Hello Everyone! I'm Jake.</h1>
                         <p>On a journey to further my skills as a full stack developer, currently studying at Adelaide University's Coding Bootcamp.</p>
                     </div>
-                    <a href="#about" className={currentPage === 'About' ? 'nav-link' : 'nav-link active'} onClick={() => handlePageChange('About')}>Learn about me</a>
+                    <a href="/about" className={currentPage === 'About' ? 'nav-link' : 'nav-link active'}>Learn about me</a>
                 </div>
             </div>
         </div>

@@ -1,5 +1,7 @@
 import React, {useState} from "react";
 
+import './contact.css'
+
 const Contact = () => {
     const [inputName, setInputName] = useState('')
     const [inputMessage, setInputMessage] = useState('')
